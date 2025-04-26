@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Asending()">Asending</button>
+    <button onclick="desending()">Desending</button>
+    <button onclick="evalu()">evaluate</button>
+    <p id="result"></p>
+    <p id="map"></p>
+    <p id="ev"></p>
+    <script>
+        var point = [6,2,78,77,101,111]
+        document.getElementById("result").innerHTML = point
+        function Asending(){
+            point.sort(function(a,b){return a - b})
+            document.getElementById("result").innerHTML = point
+        }
+            function desending(){
+            point.sort(function(a,b){return b - a})
+            document.getElementById("result").innerHTML = point
+        }
+        function mine(num){
+            return num - 69
+        }
+        var map = point.map(mine)
+        document.getElementById("map").innerHTML = map
+        function evalu(){
+            var x = 10
+            var y = 15
+            var a = eval("y - x")+"<br>"
+            var b = eval("y * x")+"<br>"
+            var c = eval("y + x")+"<br>"
+            var res = a + b + c
+            document.getElementById("ev").innerHTML = res
+        }
+        
+    </script>
+</body>
+</html>
